@@ -1,0 +1,130 @@
+.todo__list {
+  all: unset;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  gap: 5px;
+}
+
+.todo__cell {
+  width: 95%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cl);
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.todo__inputContainer {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.todo__inputField {
+  all: unset;
+  padding: 5px;
+  width: 48%;
+  color: var(--bg);
+  border: none;
+  border-radius: 10px;
+  background-color: var(--fg);
+}
+
+.todo__inputField:focus {
+  border: 2px solid var(--cyan);
+}
+
+.todo__selectUrgency {
+  padding: 8px;
+  color: var(--bg);
+  border: none;
+  border-radius: 10px;
+  background-color: var(--fg);
+  cursor: pointer;
+}
+
+.todo__inputField--edit,
+.todo__selectUrgency--edit
+{
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+.todo__addButton {
+  all:unset;
+  width: 30px;
+  height: 30px;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--cl);
+  border-radius: 100%;
+}
+
+.todo__addButton:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.todo__addButton:active {
+  opacity: 0.5;
+}
+
+
+.todo__text {
+  width: 60%; 
+}
+
+.todo__buttonContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.todo__contextButton {
+  padding: 2px 15px;
+  font-size: 20px;
+  font-family: Symbols;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.todo__contextButton:hover {
+  opacity: 0.8;
+}
+
+.todo__contextButton:active {
+  opacity: 0.5;
+}
+
+.todo__contextButton--Sort {
+  color: var(--fg);
+  background-color: var(--cl);
+}
+
+.todo__contextButton--Edit {
+  background-color: var(--yellow);
+}
+
+.todo__contextButton--Delete,
+.todo__contextButton--Deny
+{
+  color: var(--fg);
+  background-color: var(--red);
+}
+
+.todo__contextButton--Apply {
+  color: var(--fg);
+  background-color: var(--green);
+}
+
