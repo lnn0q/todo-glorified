@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express, { NextFunction, Request, Response } from "express";
 import path from "path";
 
 import cors, { CorsOptions } from "cors";
@@ -25,6 +25,11 @@ app.use(express.json());
 app.use("^/$|index(.html)?", require("./routes/root.ts"));
 
 app.use("/api/todo-list", require("./routes/api/todos.ts"));
+
+app.use("*", (err: Error, req: Request, res: Response, next: NextFunction) => {
+  console.error(err.stack);
+  res.status(500).send(err.message);
+});
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port:${PORT}`);
